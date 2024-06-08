@@ -30,18 +30,15 @@ namespace LightTalkChatBox
             this.ParentForm.ResizeEnd += this.ParentForm_ResizeEnd;
         }
 
-        /// <summary>
+
         /// 记录当前窗体的宽度
-        /// </summary>
         private volatile int _parent_form_width;
-        /// <summary>
+
         /// 记录本该置于右侧的Bubble,在窗体的宽度改变后更新这些bubble的位置
-        /// </summary>
         private readonly ConcurrentBag<BubbleBase> _right_items = new ConcurrentBag<BubbleBase>();
 
-        /// <summary>
+
         /// 窗体的Size发生改变后更新右侧bubble的位置
-        /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ParentForm_ResizeEnd(object sender, EventArgs e)
